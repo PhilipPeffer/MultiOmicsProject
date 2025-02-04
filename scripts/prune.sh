@@ -4,6 +4,7 @@ set -u
 set -o pipefail
 
 # script to prune variants in Linkage Disequilibrium (correlation coefficient > 0.05) using plink2
+# and also filter out variants with minor allele frequency (MAF) < 5%, and missing call rates > 10%
 # can be parallelized: e.g. bash prune.sh 1 9 & bash prune.sh 10 22 &
 # to run the script for chr 1-9 and chr 10-22 in parallel
 
